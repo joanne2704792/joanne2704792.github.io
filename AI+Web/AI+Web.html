@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI+Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .hero img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 20px;
+        }
+        .services, .about, .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .services h2, .about h2, .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .services .service-item {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .about img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact form input, .contact form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        .confirmation-message {
+            display: none;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="C:\Users\super\Downloads\下載 (1).png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#hero">首頁</a></li>
+            <li><a href="#services">服務</a></li>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </nav>
+    
+    <div id="hero" class="hero">
+        <img src="C:\Users\super\Downloads\20114fc196b3ace4ce19e4e2d9bdf9a55dd83291.webp" alt="Hero Image">
+    </div>
+    
+    <div id="services" class="services">
+        <h2>我們的服務</h2>
+        <div class="service-item">
+            <h3>網站設計</h3>
+            <p>我們提供專業的網站設計服務，確保您的網站不僅美觀，而且功能強大。我們的設計師會根據您的需求打造獨特的網站，幫助您在網絡上脫穎而出。</p>
+            <a href="service1.html">了解更多</a>
+        </div>
+        <div class="service-item">
+            <h3>電子商務解決方案</h3>
+            <p>我們提供全面的電子商務解決方案，包括網站構建、支付系統集成、商品管理系統和客戶關係管理工具，幫助您輕鬆管理在線商店並提升銷售。</p>
+            <a href="service2.html">了解更多</a>
+        </div>
+        <div class="service-item">
+            <h3>SEO和數字營銷</h3>
+            <p>我們的SEO和數字營銷專家將幫助您的網站在搜索引擎中獲得更高的排名，並通過精準的數字營銷策略吸引更多的潛在客戶，提高品牌的知名度和銷售額。</p>
+            <a href="service3.html">了解更多</a>
+        </div>
+    </div>
+    
+    <div id="about" class="about">
+        <h2>關於我們</h2>
+        <p>我們是一家專業的公司，致力於提供優質的服務。</p>
+        <img src="C:\Users\super\Downloads\17176567613061.jpg" alt="關於我們的圖片">
+    </div>
+    
+    <div id="contact" class="contact">
+        <h2>聯絡我們</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="您的名字">
+            <input type="email" placeholder="您的電子郵件">
+            <textarea rows="5" placeholder="您的訊息"></textarea>
+            <button type="submit">提交</button>
+        </form>
+        <div class="confirmation-message" id="confirmation">
+            謝謝您的回答，我們會盡快與您聯絡的！
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2024 WebWizards Design. 版權所有.
+    </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var contactForm = document.getElementById('contact-form');
+            var confirmation = document.getElementById('confirmation');
+
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form from submitting
+
+                // Simulate form submission (replace with actual submission logic if needed)
+                // Here, we just show the confirmation message
+                confirmation.style.display = 'block';
+                contactForm.reset(); // Optionally reset the form fields
+            });
+        });
+    </script>
+</body>
+</html>
